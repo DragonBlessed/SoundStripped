@@ -4,17 +4,17 @@
 "version": "1.0",
 "icons": {
   "16": "Images/icon16.png",
-  "24": "Images/icon24.png",   
-  "32": "Images/icon32.png"
+  "48": "Images/icon48.png",   
+  "128": "Images/icon128.png"
 },
 "action": {
+    "default_popup": "popup.html",
     "default_icon": {              
       "16": "Images/icon16.png",
-      "24": "Images/icon24.png",   
-      "32": "Images/icon32.png" 
+      "48": "Images/icon48.png",   
+      "128": "Images/icon128.png" 
     },
     "default_title": "SoundStripped"
 },
-"default_locale": "en",
 "description": "An extension to remove video from audio so you can listen in bliss without overwhelming the senses."
 }
