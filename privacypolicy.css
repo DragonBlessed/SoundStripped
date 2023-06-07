@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F5F5;
+  }
+  
+  .container {
+    width: 400px;
+  }
+  
+  .privtitle {
+    display: flex;
+    align-items: center;
+  }
+  
+  #stripImage {
+    margin-right: 10px;
+  }
+  
+  .pcontents {
+    counter-reset: section;
+    padding-left: 0;
+  }
+  
+  .pcontents li {
+    list-style-type: none;
+    counter-increment: section;
+    margin-bottom: 10px;
+  }
+  
+  .pcontents li::before {
+    content: counter(section) ".";
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .policy p {
+    margin-bottom: 5px;
+  }
