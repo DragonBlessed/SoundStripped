@@ -1,20 +1,40 @@
 {
-"manifest_version": 3,
-"name": "SoundStripped",
-"version": "1.0",
-"icons": {
-  "16": "Images/icon16.png",
-  "48": "Images/icon48.png",   
-  "128": "Images/icon128.png"
-},
-"action": {
+  "manifest_version": 3,
+  "name": "SoundStripped",
+  "version": "1.0",
+  "icons": {
+    "16": "Images/icon16.png",
+    "48": "Images/icon48.png",
+    "128": "Images/icon128.png"
+  },
+  "action": {
     "default_popup": "popup.html",
-    "default_icon": {              
+    "default_icon": {
       "16": "Images/icon16.png",
-      "48": "Images/icon48.png",   
-      "128": "Images/icon128.png" 
+      "48": "Images/icon48.png",
+      "128": "Images/icon128.png"
     },
     "default_title": "SoundStripped"
-},
-"description": "An extension to remove video from audio so you can listen in bliss without overwhelming the senses."
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://youtube.com/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["Images/*"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ],
+  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' https://youtube.com; object-src 'self'",
+    "script-src": ["'self'", "https://www.youtube.com/iframe_api"]
+  },
+  "description": "An extension to remove video from audio so you can listen in bliss without overwhelming the senses."
 }
