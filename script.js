@@ -7,7 +7,8 @@ button.addEventListener('click', () => {
 
 
 function removeVideo() {
-    
+    const playerElement = document.getElementById("player");
+    playerElement.style.display = "none";
 }
 
 

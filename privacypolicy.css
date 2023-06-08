@@ -6,13 +6,29 @@ body {
   .container {
     width: 400px;
   }
+
+  .back-btn {
+    background-color: #D2691E;
+    border: none;
+    width: 50px;
+    height: 30px;
+    font-size: 1.5vw;
+    color: #FFFFFF;
+    border-radius: 0.5vw;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 2vw;
+  }
+  
   
   .privtitle {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   
   #stripImage {
+    margin-left: auto;
     margin-right: 10px;
   }
   
